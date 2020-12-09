@@ -14,20 +14,20 @@ steps:
 #Update the container image using kubectl set
 - name: 'gcr.io/cloud-builders/kubectl'
 
-args:
+  args:
 - delete
 - deployment
 - hello-kubernetes1
 - --ignore-not-found
-env:
+  env:
 - CLOUDSDK_COMPUTE_ZONE=us-central1
 - CLOUDSDK_CONTAINER_CLUSTER=kubernetes
 - name: 'gcr.io/cloud-builders/kubectl'
-args:
+  args:
 - run
 - hello-kubernetes1
 - --image=gcr.io/brilliant-scene-290913/hello-kubernetes1
-env:
+  env:
 - CLOUDSDK_COMPUTE_ZONE=us-central1
 - CLOUDSDK_CONTAINER_CLUSTER=kubernetes
  
