@@ -26,7 +26,8 @@ steps:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
   - 'CLOUDSDK_CONTAINER_CLUSTER=kubernetes'
   args:
-  - run
+  #- run
+  - run-pod/v1 
   - hello-kubernetes1
   - --image=gcr.io/brilliant-scene-290913/hello-kubernetes1:latest
   env:
