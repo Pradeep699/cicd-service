@@ -15,19 +15,19 @@ steps:
 - name: 'gcr.io/cloud-builders/kubectl'
 
   args:
-- delete
-- deployment
-- hello-kubernetes1
-- --ignore-not-found
-env:
-- CLOUDSDK_COMPUTE_ZONE=us-central1
-- CLOUDSDK_CONTAINER_CLUSTER=kubernetes
+  - delete  
+  - deployment
+  - hello-kubernetes1
+  - --ignore-not-found
+  env:
+  - CLOUDSDK_COMPUTE_ZONE=us-central1
+  - CLOUDSDK_CONTAINER_CLUSTER=kubernetes
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
-- run
-- hello-kubernetes1
-- --image=gcr.io/brilliant-scene-290913/hello-kubernetes1
-env:
-- CLOUDSDK_COMPUTE_ZONE=us-central1
-- CLOUDSDK_CONTAINER_CLUSTER=kubernetes
+  - run
+  - hello-kubernetes1
+  - --image=gcr.io/brilliant-scene-290913/hello-kubernetes1
+  env:
+  - CLOUDSDK_COMPUTE_ZONE=us-central1
+  - CLOUDSDK_CONTAINER_CLUSTER=kubernetes
  
