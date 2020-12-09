@@ -21,15 +21,15 @@ steps:
   #- 'set'
   #- 'image'
   #- 'deployment/hello-kubernetes1'
-  - 'gcrrepo=gcr.io/brilliant-scene-290913/hello-kubernetes1:latest'
+  - 'hello-kubernetes1=gcr.io/brilliant-scene-290913/hello-kubernetes1:latest'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
   - 'CLOUDSDK_CONTAINER_CLUSTER=kubernetes'
   args:
   #- run
   - run
-  - hello-kubernetes1-6859f9df98
-  #- hello-kubernetes1
+  #- hello-kubernetes1-6859f9df98
+  - hello-kubernetes1
   - --image=gcr.io/brilliant-scene-290913/hello-kubernetes1:latest
   env:
   - CLOUDSDK_COMPUTE_ZONE=us-central1
