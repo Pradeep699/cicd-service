@@ -29,7 +29,8 @@ steps:
   #- run
   - run
   #- hello-kubernetes1-6859f9df98
-  - hello-kubernetes1
+  - hello-kubernetes1-6859f9df98-ldftr 
+  #- hello-kubernetes1
   - --image=gcr.io/brilliant-scene-290913/hello-kubernetes1:latest
   env:
   - CLOUDSDK_COMPUTE_ZONE=us-central1
