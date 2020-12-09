@@ -34,9 +34,10 @@ steps:
   - CLOUDSDK_CONTAINER_CLUSTER=kubernetes
   
   substitutions:
-  _VERSION: V1.0
+       _VERSION: V1.0
+  
   options:
-  substitution_option: 'ALLOW LOOSE'
+       substitution_option: 'ALLOW LOOSE'
  
    
   
