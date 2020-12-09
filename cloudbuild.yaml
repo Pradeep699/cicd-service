@@ -28,7 +28,7 @@ steps:
   args:
   - create 
   - --f=hello-kubernetes1
-  - hello-kubernetes1
+  #- hello-kubernetes1
   - --image=gcr.io/brilliant-scene-290913/hello-kubernetes1:latest
   env:
   - CLOUDSDK_COMPUTE_ZONE=us-central1
