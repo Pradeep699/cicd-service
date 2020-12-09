@@ -36,8 +36,8 @@ steps:
   substitutions:
        _VERSION: V1.0
   
-  options:
-       substitution_option: 'ALLOW LOOSE'
+  #options:
+       #substitution_option: 'ALLOW LOOSE'
  
    
   
