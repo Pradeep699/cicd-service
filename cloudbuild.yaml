@@ -5,11 +5,11 @@ steps:
 
 #Build the image 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-t','gcr.io/brilliant-scene-290913/hello123:latest','.']
+  args: ['build','-t','gcr.io/brilliant-scene-290913/hello1:latest','.']
 
 #Push the image  
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push','gcr.io/brilliant-scene-290913/hello123:latest']
+  args: ['push','gcr.io/brilliant-scene-290913/hello1:latest']
   
 #Update the container image using kubectl set
 - name: 'gcr.io/cloud-builders/kubectl'
@@ -17,7 +17,7 @@ steps:
   - 'set'
   - 'image'
   - 'deployment/hello123'
-  - 'hello12=gcr.io/brilliant-scene-290913/hello123:latest'
+  - 'hello1=gcr.io/brilliant-scene-290913/hello1:latest'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
   - 'CLOUDSDK_CONTAINER_CLUSTER=hello'
