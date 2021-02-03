@@ -5,11 +5,11 @@ steps:
 
 #Build the image 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-t','gcr.io/brilliant-scene-290913/hello-kubernetes1:latest','.']
+  args: ['build','-t','gcr.io/london-302417/hello-kubernetes1:latest','.']
 
 #Push the image  
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push','gcr.io/brilliant-scene-290913/hello-kubernetes1:latest']
+  args: ['push','gcr.io/london-302417/hello-kubernetes1:latest']
   
 #Update the container image using kubectl set
 - name: 'gcr.io/cloud-builders/kubectl'
@@ -26,7 +26,7 @@ steps:
   args:
   - run
   - hello-kubernetes1
-  - --image=gcr.io/brilliant-scene-290913/hello-kubernetes1
+  - --image=gcr.io/london-302417/hello-kubernetes1
   env:
   - CLOUDSDK_COMPUTE_ZONE=us-central1
   - CLOUDSDK_CONTAINER_CLUSTER=cicdcluster
