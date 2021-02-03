@@ -21,7 +21,7 @@ steps:
   - --ignore-not-found
   env:
   - CLOUDSDK_COMPUTE_ZONE=us-central1
-  - CLOUDSDK_CONTAINER_CLUSTER=kubernetes
+  - CLOUDSDK_CONTAINER_CLUSTER=cicdcluster
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
   - run
@@ -29,5 +29,5 @@ steps:
   - --image=gcr.io/brilliant-scene-290913/hello-kubernetes1
   env:
   - CLOUDSDK_COMPUTE_ZONE=us-central1
-  - CLOUDSDK_CONTAINER_CLUSTER=kubernetes
+  - CLOUDSDK_CONTAINER_CLUSTER=cicdcluster
  
